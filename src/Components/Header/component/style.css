@@ -1,0 +1,29 @@
+.margin-0{
+    margin: 0px;
+}
+.locationTitle{
+    font-size: 20px;
+    height: 35px;
+    padding: 10px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.pd-40{
+    padding: 10px 40px;
+}
+
+.addLocation{
+    float: right;
+    width: 120px;
+    height: 35px;
+    background-color: #0083ef;
+    border-radius: 25px;
+    padding: 5px 14px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.bottom-br{
+    border-bottom: 1px solid #f0f1f3;
+}
