@@ -105,7 +105,7 @@ class AddLocation extends React.Component {
             alert("Please fill the form details.")
         } else {
             this._db.insertValues(this.state).then(result => {
-                this.props.history.push("/");
+                this.props.history.push("/Location-IDB");
             }
             );
         }

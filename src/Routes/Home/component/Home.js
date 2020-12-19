@@ -19,8 +19,8 @@ class Home extends React.Component {
                 <div className="particle-custom"><Particle /></div>
                 <Header />
                 <Switch >
-                    <Route exact path="/" render={(props) => <ViewLocation idb={this._db} {...props} />} />
-                    <Route exact path="/addLocation" render={(props) => <AddLocation dbKey={new Date().getTime()} {...props} />} />
+                    <Route exact path="/Location-IDB" render={(props) => <ViewLocation idb={this._db} {...props} />} />
+                    <Route exact path="/Location-IDB/addLocation" render={(props) => <AddLocation dbKey={new Date().getTime()} {...props} />} />
                 </Switch>
             </div>
         );
