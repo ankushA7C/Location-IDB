@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Location-IDB/static/css/main.d85a0958.chunk.css",
+    "main.js": "/Location-IDB/static/js/main.304ee489.chunk.js",
+    "main.js.map": "/Location-IDB/static/js/main.304ee489.chunk.js.map",
+    "runtime-main.js": "/Location-IDB/static/js/runtime-main.6decf3f6.js",
+    "runtime-main.js.map": "/Location-IDB/static/js/runtime-main.6decf3f6.js.map",
+    "static/js/2.a4f58557.chunk.js": "/Location-IDB/static/js/2.a4f58557.chunk.js",
+    "static/js/2.a4f58557.chunk.js.map": "/Location-IDB/static/js/2.a4f58557.chunk.js.map",
+    "index.html": "/Location-IDB/index.html",
+    "precache-manifest.372580c9e6f4956a475803466cbae091.js": "/Location-IDB/precache-manifest.372580c9e6f4956a475803466cbae091.js",
+    "service-worker.js": "/Location-IDB/service-worker.js",
+    "static/css/main.d85a0958.chunk.css.map": "/Location-IDB/static/css/main.d85a0958.chunk.css.map",
+    "static/js/2.a4f58557.chunk.js.LICENSE.txt": "/Location-IDB/static/js/2.a4f58557.chunk.js.LICENSE.txt",
+    "static/media/noLocation.png": "/Location-IDB/static/media/noLocation.e6669fd4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6decf3f6.js",
+    "static/js/2.a4f58557.chunk.js",
+    "static/css/main.d85a0958.chunk.css",
+    "static/js/main.304ee489.chunk.js"
+  ]
+}
