@@ -8,7 +8,7 @@ const Header = (props) => {
         <div className="col-md-12">
             <div className="row margin-0 bottom-br">
                 <div className="col-md-9">
-                    <div className="locationTitle">Location</div>
+                    <div className="locationTitle">  <a href="/"> Location</a></div>
                 </div>
                 <div className="col-md-3 pd-40">
                     <div className="addLocation" onClick={() => props.history.push("/addLocation")}>Add Location</div>

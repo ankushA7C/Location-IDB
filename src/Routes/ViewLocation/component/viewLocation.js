@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./style.css";
 import MaterialTable from 'material-table';
 import NoLocation from "../../../noLocation.png"
+import About from "../../../Components/About/index"
 
 export default function ViewLocation(props) {
     const [state, setState] = React.useState({
@@ -31,60 +32,67 @@ export default function ViewLocation(props) {
     }
 
     return (
-        <div className="col-md-12">
-            {!state.data.length && (<div className="noLocation">
-                <img src={NoLocation} className="noLocation-img"></img>
-            </div>)}
-            {state.data.length > 0 && (<MaterialTable
-                title="Location"
-                options={{
-                    search: false,
-                    actionsColumnIndex: -1,
-                    headerStyle: {
-                        fontSize: '14px',
-                        fontWeight: '700'
-                    },
-                    tbodyStyle: {
-                        backgroundColor: 'black'
-                    },
-                    rowStyle: {
-                        backgroundColor: '#EEE',
-                    }
-                }}
-                columns={state.columns}
-                data={state.data}
-                editable={{
+        <>
+            <div className="col-md-6">
+                {!state.data.length && (<div className="noLocation">
+                    <img src={NoLocation} className="noLocation-img"></img>
+                    <div className="no-location-title">No location found</div>
+                    <div className="no-location-title">Please Add location</div>
+                </div>)}
+                {state.data.length > 0 && (<MaterialTable
+                    title="Location"
+                    options={{
+                        search: false,
+                        actionsColumnIndex: -1,
+                        headerStyle: {
+                            fontSize: '14px',
+                            fontWeight: '700'
+                        },
+                        tbodyStyle: {
+                            backgroundColor: 'black'
+                        },
+                        rowStyle: {
+                            backgroundColor: '#EEE',
+                        }
+                    }}
+                    columns={state.columns}
+                    data={state.data}
+                    editable={{
 
-                    onRowUpdate: (newData, oldData) =>
-                        new Promise((resolve) => {
-                            setTimeout(() => {
-                                const index = oldData.tableData.id;
-                                resolve();
-                                if (oldData) {
+                        onRowUpdate: (newData, oldData) =>
+                            new Promise((resolve) => {
+                                setTimeout(() => {
+                                    const index = oldData.tableData.id;
+                                    resolve();
+                                    if (oldData) {
+                                        setState((prevState) => {
+                                            const data = [...prevState.data];
+                                            data[data.indexOf(oldData)] = newData;
+                                            return { ...prevState, data };
+                                        });
+                                        updateTableData(newData);
+                                    }
+                                }, 600);
+                            }),
+                        onRowDelete: (oldData) =>
+                            new Promise((resolve) => {
+                                setTimeout(() => {
+                                    const index = oldData.tableData.id;
+                                    resolve();
                                     setState((prevState) => {
                                         const data = [...prevState.data];
-                                        data[data.indexOf(oldData)] = newData;
+                                        data.splice(data.indexOf(oldData), 1);
                                         return { ...prevState, data };
                                     });
-                                    updateTableData(newData);
-                                }
-                            }, 600);
-                        }),
-                    onRowDelete: (oldData) =>
-                        new Promise((resolve) => {
-                            setTimeout(() => {
-                                const index = oldData.tableData.id;
-                                resolve();
-                                setState((prevState) => {
-                                    const data = [...prevState.data];
-                                    data.splice(data.indexOf(oldData), 1);
-                                    return { ...prevState, data };
-                                });
-                                delteTableData(index);
-                            }, 600);
-                        }),
-                }}
-            />)}
-        </div>
+                                    delteTableData(index);
+                                }, 600);
+                            }),
+                    }}
+                />)}
+            </div>
+            <div className="col-md-6">
+                <About />
+            </div>
+        </>
     );
 }

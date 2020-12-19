@@ -6,7 +6,9 @@
     height: 35px;
     padding: 10px;
     font-weight: 700;
-    color: #ffffff;
+}
+.locationTitle >a{
+    color: #ffffff !important;
 }
 .pd-40{
     padding: 10px 40px;
@@ -17,7 +19,7 @@
     width: 120px;
     height: 35px;
     background-color: #0083ef;
-    border-radius: 25px;
+    border-radius: 5px;
     padding: 5px 14px;
     color: white;
     font-size: 15px;

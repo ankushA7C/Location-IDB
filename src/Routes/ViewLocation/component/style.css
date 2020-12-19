@@ -17,7 +17,13 @@ tbody::-webkit-scrollbar { /* WebKit */
 
 .noLocation{
     text-align: center;
+    margin: 100px;
 }
 .noLocation-img{
-    height: 300px;
+    height: 120px;
+}
+.no-location-title{
+    font-size: 30px;
+    color: white;
+    font-family: serif;
 }

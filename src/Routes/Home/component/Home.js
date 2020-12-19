@@ -5,6 +5,7 @@ import { IDBService } from "../../../Service/IDBService"
 import Header from "../../../../src/Components/Header/index"
 import AddLocation from "../../AddLocation/index"
 import ViewLocation from "../../ViewLocation/index"
+import Particle from "../../../Components/Particle/index"
 
 class Home extends React.Component {
     constructor(props) {
@@ -15,6 +16,7 @@ class Home extends React.Component {
     render() {
         return (
             <div className="row bg-dark-blue margin-0 main-Containerr">
+                <div className="particle-custom"><Particle /></div>
                 <Header />
                 <Switch >
                     <Route exact path="/" render={(props) => <ViewLocation idb={this._db} {...props} />} />
